@@ -26,6 +26,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -67,6 +68,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -91,16 +93,22 @@
     <Compile Include="MainWnd.xaml.cs">
       <DependentUpon>MainWnd.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\MenuModel.cs" />
     <Compile Include="RadomWnd.xaml.cs">
       <DependentUpon>RadomWnd.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SytemSetWnd.xaml.cs">
+      <DependentUpon>SytemSetWnd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UControls\MenuControl.xaml.cs">
+      <DependentUpon>MenuControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Units\EmnuTool.cs" />
     <Compile Include="Units\ExcelTool.cs" />
     <Compile Include="Units\LoggerTool.cs" />
     <Compile Include="Units\PDFTool.cs" />
     <Compile Include="Units\ZipTool.cs" />
-    <Compile Include="UserCtrs\UCButton.xaml.cs">
-      <DependentUpon>UCButton.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="UserCtrs\UCButton.cs" />
     <Page Include="LoginWnd.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -129,6 +137,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Skin\scrollview_style.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Skin\style.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -137,7 +149,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserCtrs\UCButton.xaml">
+    <Page Include="SytemSetWnd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UControls\MenuControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -160,6 +180,8 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Doc\“双随机一公开”系统需求说明-1.docx" />
+    <None Include="Doc\功能分解－20170520.xlsx" />
     <Resource Include="Fonts\SIMYOU.TTF" />
     <Resource Include="Fonts\FZXZZ.TTF" />
     <Resource Include="Fonts\SIMFANG.TTF" />
@@ -184,6 +206,8 @@
     <Content Include="Dlls\NPOI.OOXML.dll" />
     <Content Include="Dlls\NPOI.OpenXml4Net.dll" />
     <Content Include="Dlls\NPOI.OpenXmlFormats.dll" />
+    <Resource Include="Doc\进度把控.txt" />
+    <Resource Include="Imgs\default.jpg" />
     <Resource Include="Imgs\button_gb.png" />
     <Resource Include="Imgs\main_bg_3.jpg" />
     <Resource Include="Imgs\main_bg_2.jpg" />
@@ -197,6 +221,7 @@
     <Resource Include="Imgs\logo.png" />
     <Resource Include="Imgs\Header.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

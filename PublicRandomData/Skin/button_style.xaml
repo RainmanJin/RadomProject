@@ -1,6 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:local="clr-namespace:PublicRandomData.Skin">
+                    xmlns:local="clr-namespace:PublicRandomData.Skin"
+                    xmlns:uc="clr-namespace:PublicRandomData.UserCtrs">
     <Style TargetType="{x:Type Button}" x:Key="Login.Sumbit.Button">
         <Setter Property="Foreground" Value="#FFF" />
         <Setter Property="FontSize" Value="14" />
@@ -46,6 +47,40 @@
                             <Setter Property="Source" Value="../Imgs/close_psd.png" TargetName="img"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--<uc:UCButton Height="80" Width="200" Margin="10" TitleContent="你好，中国！" BKSolidBrush="#3385FF" Foreground="#FFF" Cursor="Hand">
+        <uc:UCButton.Template>
+            <ControlTemplate TargetType="{x:Type uc:UCButton}">
+                <Grid Background="{TemplateBinding BKSolidBrush}">
+                    <Label Background="#01ffffff" />
+                    <Border BorderBrush="#ddd" BorderThickness="1">
+                        <ContentPresenter/>
+                    </Border>
+                    <Border Height="30" Background="#99FFFFFF" VerticalAlignment="Bottom" Visibility="{TemplateBinding SubTitleVisibility}">
+                        <TextBlock Text="{TemplateBinding TitleContent}" VerticalAlignment="Center" TextAlignment="Center"/>
+                    </Border>
+                </Grid>
+            </ControlTemplate>
+        </uc:UCButton.Template>
+    </uc:UCButton>-->
+    <Style TargetType="{x:Type uc:UCButton}" x:Key="Main.UC.Button">
+        <Setter Property="Foreground" Value="#FFF" />
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type uc:UCButton}">
+                    <Grid Background="{TemplateBinding Background}">
+                        <Label Background="#01ffffff" />
+                        <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding BKSolidBrush}">
+                            <ContentPresenter/>
+                        </Border>
+                        <Border Height="30" Background="{TemplateBinding SubBKSolidBrush}" VerticalAlignment="Bottom" Visibility="{TemplateBinding SubTitleVisibility}">
+                            <TextBlock Text="{TemplateBinding SubTitleContent}" VerticalAlignment="Center" TextAlignment="Center"/>
+                        </Border>
+                    </Grid>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

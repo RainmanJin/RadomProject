@@ -1,0 +1,8 @@
+﻿<Window x:Class="PublicRandomData.SytemSetWnd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SytemSetWnd" Height="300" Width="300">
+    <Grid>
+        <TextBlock Text="系统设置"/>
+    </Grid>
+</Window>

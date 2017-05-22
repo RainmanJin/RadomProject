@@ -7,7 +7,7 @@
         MouseLeftButtonDown="Window_MouseLeftButtonDown"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d" WindowStyle="None" Style="{StaticResource Login.Window}"
-        Title="LoginWnd" Height="750" Width="600">
+        Title="LoginWnd" Height="650" Width="500">
     <Window.Background>
         <ImageBrush ImageSource="Imgs/LoginBg.jpg" Stretch="UniformToFill"/>
     </Window.Background>

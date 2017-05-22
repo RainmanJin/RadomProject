@@ -9,6 +9,7 @@
                 <ResourceDictionary Source="pack://application:,,,/PublicRandomData;component/Skin/style.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/PublicRandomData;component/Skin/window_style.xaml"/>
                 <ResourceDictionary Source="pack://application:,,,/PublicRandomData;component/Skin/button_style.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/PublicRandomData;component/Skin/scrollview_style.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
