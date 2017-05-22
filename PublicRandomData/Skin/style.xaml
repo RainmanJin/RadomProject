@@ -1,0 +1,47 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style x:Key="IconFont" >
+        <Setter Property="TextElement.FontFamily" Value="pack://application:,,,/PublicRandomData;component/Fonts/#FontAwesome" />
+    </Style>
+    <Style x:Key="Login.TextBox" TargetType="TextBox">
+        <Setter Property="Foreground" Value="#999"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="Padding" Value="10 8"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="SelectionBrush" Value="#C8EDCC"/>
+        <Setter Property="MaxLength" Value="20"/>
+    </Style>
+    <Style x:Key="Login.Password" TargetType="PasswordBox">
+        <Setter Property="Foreground" Value="#999"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="Padding" Value="10 8"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="SelectionBrush" Value="#C8EDCC"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="MaxLength" Value="20"/>
+    </Style>
+    <Style x:Key="Main.Tool.Button" TargetType="Button">
+        <Setter Property="Foreground" Value="#FFF"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Label />
+                        <Border Height="{TemplateBinding Height}" Width="{TemplateBinding Width}">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10 0"/>
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Foreground" Value="#14CCB4"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

@@ -1,0 +1,42 @@
+﻿<Window x:Class="PublicRandomData.LoginWnd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PublicRandomData"
+        MouseLeftButtonDown="Window_MouseLeftButtonDown"
+        WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d" WindowStyle="None" Style="{StaticResource Login.Window}"
+        Title="LoginWnd" Height="750" Width="600">
+    <Window.Background>
+        <ImageBrush ImageSource="Imgs/LoginBg.jpg" Stretch="UniformToFill"/>
+    </Window.Background>
+    <Grid TextBlock.FontFamily="{x:Static SystemFonts.CaptionFontFamily}">        
+        <StackPanel Height="320" Width="320" Background="#FFF4F4F4">
+            <Border Height="90" Width="90" Background="Green" CornerRadius="45" Margin="0 -50 0 10">
+                <TextBlock TextAlignment="Center" VerticalAlignment="Center" Text="&#xf0c0;" Style="{StaticResource IconFont}" Foreground="#FFF" FontSize="40"/>
+            </Border>
+            <TextBlock Text="系 统 登 录" Margin="0 0 0 10" Foreground="#999" FontSize="16" TextAlignment="Center"/>
+            <Border BorderBrush="#ddd" BorderThickness="1" Height="40" Margin="40 10">
+                <StackPanel Orientation="Horizontal">
+                    <TextBox Text="ACCOUNT" Width="200" Style="{StaticResource Login.TextBox}"/>
+                    <Border Width="38" Background="Green" BorderBrush="Transparent">
+                        <TextBlock Text="&#xf007;" Style="{StaticResource IconFont}" FontSize="18" Foreground="#fff" TextAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </StackPanel>
+            </Border>
+            <Border BorderBrush="#ddd" BorderThickness="1" Height="40" Margin="40 10">
+                <StackPanel Orientation="Horizontal">
+                    <PasswordBox Password="PASSWORD" Padding="10 8" Width="200" Style="{StaticResource Login.Password}"/>
+                    <Border Width="38" Background="Green" BorderBrush="Transparent">
+                        <TextBlock Text="&#xf023;" Style="{StaticResource IconFont}" FontSize="20" Foreground="#fff" TextAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </StackPanel>
+            </Border>
+            <Button x:Name="btnLogin" Height="40" Width="240" Content="登录" Style="{StaticResource Login.Sumbit.Button}" Margin="10" Click="btnLogin_Click"/>
+            <TextBlock Text="忘记密码？" Foreground="#999" TextAlignment="Center"/>
+        </StackPanel>
+        <TextBlock VerticalAlignment="Bottom" Text="版权2017.左耳科技保留所有权利" Margin="0 0 0 40" TextAlignment="Center" Foreground="#999"/>
+        <Button Tag="Close" Style="{StaticResource Login.Close.Button}" HorizontalAlignment="Right" VerticalAlignment="Top" Click="Button_Click"/>
+    </Grid>
+</Window>
