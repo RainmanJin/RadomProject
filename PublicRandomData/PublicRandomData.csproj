@@ -94,11 +94,15 @@
       <DependentUpon>MainWnd.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\MenuModel.cs" />
+    <Compile Include="Models\UserModel.cs" />
     <Compile Include="RadomWnd.xaml.cs">
       <DependentUpon>RadomWnd.xaml</DependentUpon>
     </Compile>
     <Compile Include="SytemSetWnd.xaml.cs">
       <DependentUpon>SytemSetWnd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UControls\LimitsManager.xaml.cs">
+      <DependentUpon>LimitsManager.xaml</DependentUpon>
     </Compile>
     <Compile Include="UControls\MenuControl.xaml.cs">
       <DependentUpon>MenuControl.xaml</DependentUpon>
@@ -137,6 +141,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Skin\listview_style.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Skin\scrollview_style.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -156,6 +164,10 @@
     <Page Include="Themes\Generic.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UControls\LimitsManager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UControls\MenuControl.xaml">
       <SubType>Designer</SubType>
@@ -187,6 +199,7 @@
     <Resource Include="Fonts\SIMFANG.TTF" />
     <Resource Include="Fonts\MSYH.ttf" />
     <Resource Include="Fonts\FontAwesome.otf" />
+    <None Include="Doc\双随机模板.xlsx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

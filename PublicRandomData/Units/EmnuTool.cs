@@ -9,7 +9,7 @@ namespace PublicRandomData
     /// <summary>
     /// 用户角色
     /// </summary>
-    enum UserType
+    public enum UserType
     {
         /// <summary>
         /// 基础数据管理员

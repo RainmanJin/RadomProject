@@ -3,3 +3,5 @@
 ################################################################################
 
 /PublicRandomData/bin/Debug
+*.suo
+/PublicRandomData/obj/Debug
